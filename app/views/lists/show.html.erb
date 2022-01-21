@@ -2,6 +2,7 @@
 
 <%= link_to "Volver al listado", lists_path  %>
 <%= link_to "Agregar a bookmark", new_list_bookmark_path(@list) %>
+ <%= link_to 'delete this list', list_path(@list), method: :delete, class: 'btn btn-cancel', data: { confirm: 'Are you sure you want to delete this list?' } %>
 
 <% @list.movies.each do |movie| %>
 <div>

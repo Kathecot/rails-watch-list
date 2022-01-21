@@ -1,5 +1,4 @@
 class ListsController < ApplicationController
-
   # index, show, new, create
   def index
     @lists = List.all
@@ -20,6 +19,11 @@ class ListsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def destroy
+    @list.destroy
+    redirect_to lists_path
   end
 
   private
